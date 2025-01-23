@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Random Scroll</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #222;
+        overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateX(0deg);
+        animation: gallery 15s linear infinite;
+        cursor: pointer;
+      }
+
+      .container span {
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 72deg))
+          translateX(calc(var(--i) * 200px));
+      }
+
+      .container img {
+        width: 150px;
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease;
+      }
+
+      @keyframes gallery {
+        from {
+          transform: perspective(1000px) rotateX(0deg);
+        }
+        to {
+          transform: perspective(1000px) rotateX(360deg);
+        }
+      }
+
+      .container img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span style="--i: 1"><img src="../posters/img1.jpg" alt="image1" /></span>
+      <span style="--i: 2"><img src="../posters/img2.jpg" alt="image2" /></span>
+      <span style="--i: 3"><img src="../posters/img3.jpg" alt="image3" /></span>
+      <span style="--i: 4"><img src="../posters/img4.jpg" alt="image4" /></span>
+      <span style="--i: 5"><img src="../posters/img5.jpg" alt="image5" /></span>
+    </div>
+  </body>
+</html>

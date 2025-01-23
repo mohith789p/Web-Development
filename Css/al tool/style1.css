@@ -1,0 +1,194 @@
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blinking {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: transparent;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  flex-direction: row;
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: gold;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+nav ul li a:hover {
+  color: #4caf50;
+  font-size: 32px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("bg1.jpg");
+  background-size: cover;
+  font-family: "Arial";
+  color: gold;
+  z-index: 1;
+}
+
+.home,
+.hard,
+.soft {
+  transform: translate(-50%, -50%);
+  width: min-content;
+  padding: 30px;
+  text-align: center;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 25px);
+  border-radius: 10px;
+  margin: 25px;
+  z-index: 2;
+}
+
+.home:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+h1 {
+  text-align: center;
+  justify-content: center;
+}
+h1:hover,
+label:hover,
+li:hover {
+  color: #00ff00;
+}
+.animation {
+  text-align: start;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(18), blinking 0.75s steps(18);
+}
+label {
+  font-size: 30px;
+}
+
+input[type="text"] {
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  border-radius: 50px 20px;
+  font-size: medium;
+  margin: 35px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 3px solid gold;
+  color: deepskyblue;
+}
+input[type="radio"] {
+  border: 0px;
+  width: 25px;
+  height: 25px;
+}
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 2em 1em 4em / 0.5em 3em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green; /* Darker green on hover */
+}
+.radio-group {
+  padding: 30px;
+  display: flex;
+  /* transform: scale(1.2); */
+  accent-color: blue;
+  gap: 40px; /* Space between the two radio items */
+}
+
+.radio-item {
+  display: flex;
+  align-items: center; /* Align radio button and label in the center */
+}
+
+.radio-item input {
+  margin-right: 5px; /* Space between the radio button and label */
+}
+a:active {
+  border: 3px solid #00ff00;
+  border-radius: 50% / 25%;
+}
+a:focus {
+  color: #4caf50;
+  font-size: 32px;
+}
+.home {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+}
+.hard,
+.soft {
+  width: 15%;
+  color: yellowgreen;
+  height: 60%;
+  font-size: 1em;
+  z-index: 3;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+h3 {
+  color: whitesmoke;
+}
+h3:hover {
+  font-size: 1.5em;
+}
+.hard {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+}
+.soft {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}

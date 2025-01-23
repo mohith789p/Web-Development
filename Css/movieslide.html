@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Slide</title>
+    <style>
+      * {
+        background-color: #000;
+      }
+      .container {
+        margin: 100px 0 0 200px;
+        width: 70%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      .container img {
+        width: 10%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px solid rgba(255, 255, 255, 0.68465);
+        transition: 0.5s ease;
+      }
+      .container img:hover {
+        width: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="posters/img1.jpg" alt="image1" />
+      <img src="posters/img2.jpg" alt="image2" />
+      <img src="posters/img3.jpg" alt="image3" />
+      <img src="posters/img4.jpg" alt="image4" />
+      <img src="posters/img5.jpg" alt="image5" />
+    </div>
+  </body>
+</html>

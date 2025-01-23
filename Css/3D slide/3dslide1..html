@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Image Slide</title>
+    <style>
+      * {
+        background-color: #000;
+      }
+      img {
+        width: 150px;
+        height: 450px;
+      }
+      .container img {
+        margin: 100px 0 0 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        animation: gallery 15s linear infinite;
+        cursor: pointer;
+      }
+      @keyframes gallery {
+        from {
+          transform: perspective(100px) rotateY(0deg); /* perspective(1000px) */
+        }
+        to {
+          transform: perspective(1000px) rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span style="--i: 1"><img src="../posters/img1.jpg" alt="image1" /></span>
+      <span style="--i: 2"><img src="../posters/img2.jpg" alt="image2" /></span>
+      <span style="--i: 3"><img src="../posters/img3.jpg" alt="image3" /></span>
+      <span style="--i: 4"><img src="../posters/img4.jpg" alt="image4" /></span>
+      <span style="--i: 5"><img src="../posters/img5.jpg" alt="image5" /></span>
+    </div>
+  </body>
+</html>

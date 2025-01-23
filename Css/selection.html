@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection</title>
+    <!-- Font Awesome CDN for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 25px;
+      }
+      .wrapper .card {
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        animation: bgcolorchanges 6s infinite linear;
+      }
+      .wrapper .card:hover {
+        animation: bgcolorchanges 6s infinite linear;
+        animation-play-state: paused;
+        transform: scale(1.2);
+      }
+      .wrapper:hover > :not(:hover) {
+        filter: blur(3px);
+        opacity: 0.5;
+      }
+      summary {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      p {
+        font-size: 2rem;
+      }
+      i {
+        font-size: 3rem;
+        cursor: pointer;
+        animation: colorchanges 0.5s infinite linear;
+      }
+      @keyframes colorchanges {
+        from,
+        to {
+          color: red;
+        }
+        50% {
+          color: snow;
+        }
+      }
+      @keyframes bgcolorchanges {
+        from {
+          background-color: violet;
+        }
+        20% {
+          background-color: indigo;
+        }
+        40% {
+          background-color: blue;
+        }
+        60% {
+          background-color: yellow;
+        }
+        80% {
+          background-color: orange;
+        }
+        to {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <details>
+      <summary>Read Me</summary>
+      <p>
+        Hello everyone, this is my first animation. <br />
+        Do you like it? <i class="fas fa-heart"></i>
+      </p>
+    </details>
+    <div class="wrapper">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>

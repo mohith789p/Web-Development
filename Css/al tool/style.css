@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("bg1.jpg");
+  background-size: cover;
+  font-family: "Arial";
+}
+
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  padding: 40px;
+  text-align: center;
+  background: transparent;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 25px);
+  border-radius: 10px;
+}
+
+.login:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+h1 {
+  text-align: center;
+  color: gold;
+  padding: 20px;
+}
+h1:hover,
+label:hover {
+  color: #00ff00;
+}
+
+label {
+  color: gold;
+  font-size: 17px;
+}
+
+#Uname,
+#Pass {
+  width: 300px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 50px 20px;
+  padding-left: 15px;
+  font-size: medium;
+}
+
+#Uname:focus,
+#Pass:focus {
+  outline: none;
+  border: 3px solid gold;
+  color: deepskyblue;
+}
+
+#log {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: blue;
+  background-color: gold; /* Button background */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+#log:hover {
+  background-color: #277582; /* Button hover background */
+  color: white; /* Button hover text color */
+}
+
+span {
+  color: white;
+  font-size: 17px;
+}
+
+a {
+  /* float: right; */
+  /* background-color: mediumaquamarine; */
+  color: white; /* Link text color */
+  padding: 5px 10px; /* Link padding */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Add border radius */
+}
+
+a:hover {
+  background-color: #277582; /* Link hover background */
+}
+
+.forgot {
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  accent-color: #0000ff;
+  padding: 25px;
+}
+.sign {
+  padding: 20px;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 2em 1em 4em / 0.5em 3em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green; /* Darker green on hover */
+  color: gold;
+}
+input[type="checkbox"] {
+  border: 0px;
+  width: 15px;
+  height: 15px;
+}
